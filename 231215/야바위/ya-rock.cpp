@@ -15,14 +15,13 @@ int main() {
     }
 
     int ans = 0;
-    int i, j = 0;
-    for(i=0; i<3; i++){
-        int cup[3] = {};
+    for(int i=0; i<3; i++){
         int cnt = 0;
+        int cup[3] = {};
         cup[i] = 1;
-        for(j=0; j<n; j++){
-            swap(cup[arr[0][j]], cup[arr[1][j]]);
-            if(cup[arr[2][j]] == 1){
+        for(int j=0; j<n; j++){
+            swap(cup[arr[0][j]-1], cup[arr[1][j]-1]);
+            if(cup[arr[2][j]-1] == 1){
                 cnt++;
             }
         }
