@@ -27,7 +27,6 @@ int main() {
             }
         }
         ans = max(ans, cnt);
-        cup[arr[i][j]] = 0;
     }
     
     cout << ans;
