@@ -14,7 +14,7 @@ int main() {
         cout << "mask";
     }
     else {
-        cout << 0;
+        cout << "no";
     }
     return 0;
 }
