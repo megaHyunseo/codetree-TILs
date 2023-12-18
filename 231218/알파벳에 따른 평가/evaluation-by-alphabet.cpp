@@ -20,7 +20,7 @@ int main() {
         cout << "Usually";
     }
     else if(n == 'D') {
-        cout << "Effot";
+        cout << "Effort";
     }
     else {
         cout << "Failure";
