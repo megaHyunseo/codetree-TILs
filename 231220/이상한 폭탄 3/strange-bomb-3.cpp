@@ -15,8 +15,10 @@ int main() {
     int ans = 0;
     for(int i=0; i<n; i++){
         int cnt = 0;
-        for(int j=i; j<i+k; j++){
-            if(arr[i] == arr[j]){
+        for(int j=0; j<n; j++){
+            if(i == j) continue;
+
+            if(arr[i] == arr[j] && i-j <= k){
                 cnt++;
             }
         }
