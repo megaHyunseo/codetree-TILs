@@ -1,10 +1,11 @@
 #include <iostream>
 #include <algorithm>
 
-#define MAXN 1000
+#define MAX_N 1000
+#define MAX_NUM 10000
 
 int n, k;
-int arr[MAXN];
+int arr[MAX_N];
 
 using namespace std;
 
@@ -24,7 +25,7 @@ int main() {
         cin >> arr[i];
     }
     int ans = 0;
-    for(int i=1; i<=MAXN; i++){
+    for(int i=1; i<=MAX_NUM; i++){
         ans = max(ans, countNum(i, i+k));
     }
     cout << ans;
