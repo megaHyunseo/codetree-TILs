@@ -23,9 +23,10 @@ int main() {
     for(int i=0; i<n; i++){
         cin >> arr[i];
     }
-
-    for(int i=1; i<=1000; i++){
+    int ans = 0;
+    for(int i=1; i<=MAXN; i++){
         ans = max(ans, countNum(i, i+k));
     }
+    cout << ans;
     return 0;
 }
