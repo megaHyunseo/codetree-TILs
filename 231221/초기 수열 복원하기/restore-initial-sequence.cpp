@@ -22,7 +22,7 @@ int main() {
         bool satisfied = true;
         bool exist[MAXN+1] = {};
         for(int j=0; j<n; j++){
-            if(res[j] <= 0 || arr[j] > n){
+            if(res[j] <= 0 || res[j] > n){
                 satisfied = false;
             }else{
                 if(exist[res[j]]){
