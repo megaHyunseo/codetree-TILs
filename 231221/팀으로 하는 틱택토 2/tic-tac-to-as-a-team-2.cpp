@@ -19,46 +19,79 @@ int main() {
         for(int j = 0; j < MAX_A; j++)
             arr[i][j] = inp[i][j] - '0';
 
-    int cnt = 0;
+    int ans = 0;
 
-    // 가로줄, 세로줄 검사
-    for(int i=0; i<3; i++){
-        // 가로줄 검사
-        if(arr[i][0] == arr[i][1] && arr[i][0] != arr[i][2]){
-            cnt++;
-        }else if(arr[i][1] == arr[i][2] && arr[i][1] != arr[i][0]){
-            cnt++;
-        }else if(arr[i][0] == arr[i][2] && arr[i][0] != arr[i][1]){
-            cnt++;
+    //i, j 두 명이 팀이 되었을 때
+    for(int i = 1; i <= MAX_X; i++){
+        for(int j = i + 1; j <= MAX_X; j++){
+            bool win = false;
+
+            int score_i = 0, score_j = 0;
+
+            // 가로줄 빙고
+            for(int k = 0; k < MAX_A; k++){
+                score_i = 0, score_j = 0;
+                for(int l = 0; l < MAX_A; l++){
+                    if(arr[k][l] == i){
+                        score_i++;
+                    }
+                    if(arr[k][l] == j){
+                        score_j++;
+                    }
+                }
+                if(score_i + score_j == 3 && score_i >= 1 && score_j >= 1){
+                    win = true;
+                }
+            }
+
+            // 세로줄 빙고
+            for(int k = 0; k < MAX_A; k++){
+                score_i = 0, score_j = 0;
+                for(int l = 0; l < MAX_A; l++){
+                    if(arr[l][k] == i){
+                        score_i++;
+                    }
+                    if(arr[l][k] == j){
+                        score_j++;
+                    }
+                }
+                if(score_i + score_j == 3 && score_i >= 1 && score_j >= 1){
+                    win = true;
+                }
+            }
+
+            //왼->오 대각선
+            score_i = 0, score_j = 0;
+            for(int k = 0; k < MAX_A; k++){
+                if(arr[k][k] == i){
+                    score_i++;
+                }
+                if(arr[k][k] == j){
+                    score_j++;
+                }
+            }
+            if(score_i + score_j == 3 && score_i >= 1 && score_j >= 1){
+                win = true;
+            }
+
+            score_i = 0, score_j = 0;
+            for(int k = 0; k < MAX_A; k++){
+                if(arr[k][MAX_A - k - 1] == i){
+                    score_i++;
+                }
+                if(arr[k][MAX_A - k - 1] == j){
+                    score_j++;
+                }
+            }
+            if(score_i + score_j == 3 && score_i >= 1 && score_j >= 1){
+                win = true;
+            }
+
+            if(win) ans++;
         }
 
-        // 세로줄 검사
-        if(arr[0][i] == arr[1][i] && arr[0][i] != arr[2][i]){
-            cnt++;
-        }else if(arr[1][i] == arr[2][i] && arr[1][i] != arr[0][i]){
-            cnt++;
-        }else if(arr[0][i] == arr[2][i] && arr[0][i] != arr[1][i]){
-            cnt++;
-        }
     }
+    cout << ans;
 
-    // 대각선 검사
-    if(arr[0][0] == arr[1][1] && arr[0][0] != arr[2][2]){
-        cnt++;
-    }else if(arr[0][0] == arr[2][2] && arr[0][0] != arr[1][1]){
-        cnt++;
-    }else if(arr[1][1] == arr[2][2] && arr[1][1] != arr[0][0]){
-        cnt++;
-    }
-
-    if(arr[0][2] == arr[1][1] && arr[0][2] != arr[2][0]){
-        cnt++;
-    }else if(arr[1][1] == arr[2][0] && arr[1][1] != arr[0][2]){
-        cnt++;
-    }else if(arr[0][2] == arr[2][0] && arr[0][2] != arr[1][1]){
-        cnt++;
-    }
-
-    cout << cnt;
     return 0;
 }
