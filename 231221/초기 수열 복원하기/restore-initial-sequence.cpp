@@ -16,7 +16,7 @@ int main() {
     for(int i=1; i<=n; i++){
         res[0] = i;
         for(int j=1; j<n; j++){
-            res[j] = arr[j-1] + res[j-1];
+            res[j] = arr[j-1] - res[j-1];
         }
 
         bool satisfied = true;
