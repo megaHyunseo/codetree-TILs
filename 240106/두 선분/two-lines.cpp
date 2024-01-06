@@ -14,15 +14,11 @@ int main() {
         cout << "intersecting";
     }
     */
-
+    10 13 15 17
     //겹치는 경우로 생각하기
     if(x2 > x3){
         cout << "intersecting";
     }else if(x2 > x4){
-        cout << "intersecting";
-    }else if(x3 > x2){
-        cout << "intersecting";
-    }else if(x4 > x2){
         cout << "intersecting";
     }else{
         cout << "nonintersecting";
