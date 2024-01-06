@@ -5,7 +5,8 @@ using namespace std;
 
 int n;
 int x1, x2;
-int max_x1, min_x2;
+int max_x1;
+int min_x2 = INT_MAX;
 
 int main() {
     cin >> n;
