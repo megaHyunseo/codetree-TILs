@@ -15,7 +15,7 @@ int main() {
         cin >> c[i] >> u[i];
     }
 
-    if(u[p - 1] == ){
+    if(u[p - 1] == 0){
         return 0;
     }
 
