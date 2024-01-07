@@ -15,6 +15,10 @@ int main() {
         cin >> c[i] >> u[i];
     }
 
+    if(u[p - 1] == ){
+        return 0;
+    }
+
     for(int i = p - 1; i < m; i++){
         char x = c[i];
         check[(int)(x - 65)] = 1;
