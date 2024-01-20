@@ -7,8 +7,10 @@ int main() {
 
     cin >> n;
 
-    for(int i = 0 ; i <= n ; i++) {
+    for(int i = 0 ; i < n ; i++) {
+
         cin >> k;
+        
         if(k % 2 == 1 && k % 3 == 0) {
             cout << k << "\n";
         }
