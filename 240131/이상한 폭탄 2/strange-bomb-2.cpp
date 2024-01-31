@@ -21,7 +21,7 @@ int main() {
             if(i == j) continue;
 
             if(arr[i] == arr[j]){
-                if(j-i <= k){
+                if(j-i < k){
                     ans = max(ans, arr[i]);
                 }
             }
