@@ -19,7 +19,7 @@ int main() {
         if(X / 2 <= ans){
             speed--;
             if(speed == 0){
-                speed++;
+                speed = 1;
             }
         }else{
             speed++;
