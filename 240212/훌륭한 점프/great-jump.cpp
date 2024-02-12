@@ -34,7 +34,7 @@ int main() {
     }
 
     int ans = INT_MAX;
-    for(int a = max(arr[0], arr[n]); a <= MAXN; a++){
+    for(int a = max(arr[0], arr[n - 1]); a <= MAXN; a++){
         if(isAvailable(a)){
             ans = min(ans, a);
         }
