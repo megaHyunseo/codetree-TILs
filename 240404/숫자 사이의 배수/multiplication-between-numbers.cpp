@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    cout << sum << " " << sum/cnt;
+    cout << sum << " " << (double)sum/cnt;
 
     return 0;
 }
