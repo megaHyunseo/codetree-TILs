@@ -8,7 +8,7 @@ int main() {
     cin >> a >> b;
 
     int prod = 1;
-    for(int i = a ; i <= b + 1 ; i++) {
+    for(int i = 1 ; i <= b ; i++) {
         prod *= a;
     }
 
