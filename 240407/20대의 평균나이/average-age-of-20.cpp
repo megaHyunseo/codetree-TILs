@@ -11,7 +11,7 @@ int main() {
 
         cin >> n;
 
-        if (n < 20 && n >= 30) {
+        if (n < 20 || n >= 30) {
             break;
         }
 
