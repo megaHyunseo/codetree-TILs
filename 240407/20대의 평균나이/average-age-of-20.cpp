@@ -3,16 +3,15 @@ using namespace std;
 
 int main() {
     
+    int n;
     int sum = 0;
 
     int cnt = 0;
     while (1) {
 
-        int n;
-
         cin >> n;
 
-        if (n >= 30) {
+        if (n <= 10 && n >= 30) {
             break;
         }
 
