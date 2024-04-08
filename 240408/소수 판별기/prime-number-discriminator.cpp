@@ -6,6 +6,8 @@ int main() {
     int n;
     bool k = true;
 
+    cin >> n;
+
     for(int i = 2 ; i < n ; i++) {
         if(n % i == 0) {
             k = false;
@@ -18,6 +20,6 @@ int main() {
     else {
         cout << "C";
     }
-    
+
     return 0;
 }
