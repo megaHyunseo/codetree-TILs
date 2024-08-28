@@ -3,7 +3,7 @@ n = int(input())
 for i in range(n):
     a, b = map(int, input().split())
 
-    sum = 1
+    ans = 1
     for j in range(a, b + 1):
-        sum *= j
-    print(sum)
+        ans *= j
+    print(ans)
