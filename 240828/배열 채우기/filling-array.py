@@ -4,6 +4,7 @@ cnt = 0
 for i in a[:]:
     if i == 0:
         print(*a[i-2::-1])
+        cnt += 1
         break
 
 if cnt == 0:
