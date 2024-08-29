@@ -6,5 +6,5 @@ for i in range(len(a)):
         ans += a[i]
     else:
         print(ans, end=' ')
-        print(f'{ans / (i + 1):.1f}')
+        print(f'{ans / (i):.1f}')
         break
