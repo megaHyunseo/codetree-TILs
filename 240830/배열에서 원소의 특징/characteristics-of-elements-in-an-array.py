@@ -1,5 +1,6 @@
 a = list(map(int, input().split()))
 
-k = a.index(3)
-
-print(a[k - 1])
+for i in range(len(a)):
+    if a[i] % 3 == 0:
+        print(a[i - 1])
+        break
