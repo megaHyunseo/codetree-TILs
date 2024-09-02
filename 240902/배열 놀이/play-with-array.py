@@ -13,6 +13,4 @@ for i in range(q):
         except:
             print(0)
     else:
-        for j in range(a[1] - 1, a[2]):
-            print(k[j], end=' ')
-        print()
+        print(*k[a[1]-1 : a[2]])
