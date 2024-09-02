@@ -15,3 +15,4 @@ for i in range(q):
     else:
         for j in range(a[1] - 1, a[2]):
             print(k[j], end=' ')
+        print()
