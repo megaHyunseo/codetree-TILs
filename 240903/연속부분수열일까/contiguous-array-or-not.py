@@ -1,17 +1,11 @@
 n1, n2 = map(int, input().split())
-
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-try:
-    k = a.index(b[0])
-    cnt = 0
-    for i, n in enumerate(b):
-        if a[k + i] == n:
-            cnt += 1
-    if cnt == len(b):
-        print('Yes')
-    else:
-        print('No')
-except:
-    print('No')
+def is_continuous_subsequence(a, b):
+    for i in range(len(a) - len(b) + 1):
+        if a[i:i+len(b)] == b:
+            return True
+    return False
+
+print("Yes" if is_continuous_subsequence(a, b) else "No")
