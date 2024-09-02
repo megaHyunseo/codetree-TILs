@@ -2,7 +2,7 @@ k = [0] * 10
 
 a, b = map(int, input().split())
 
-while a >= 1:
+while a > 1:
     k[a % b] += 1
     a = a // b
 
