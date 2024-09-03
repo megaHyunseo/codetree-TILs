@@ -1,6 +1,6 @@
 n = int(input())
 
-k = [0] * (n + 1)
+k = [0] * 1001
 
 a = list(map(int, input().split()))
 
