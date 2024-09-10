@@ -7,7 +7,7 @@ k = [
 
 for i in range(m):
     a, b = map(int, input().split())
-    k[a][b] = 1
+    k[a - 1][b - 1] = 1
 
 for i in range(n):
     for j in range(n):
