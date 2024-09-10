@@ -1,8 +1,8 @@
 n, m = map(int, input().split())
 
 k = [
-    [0 for i in range(n + 1)]
-    for i in range(n + 1)
+    [0 for i in range(n)]
+    for i in range(n)
 ]
 
 for i in range(m):
